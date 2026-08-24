@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Estudos: Holocausto & Guerra Fria 2.0</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-body: #0b0f17;
+            --bg-card: rgba(22, 30, 46, 0.7);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --border-glow: rgba(99, 102, 241, 0.3);
+            
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+
+            --primary: #6366f1;
+            --primary-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+            --accent-cyan: #06b6d4;
+            --accent-amber: #f59e0b;
+            --accent-rose: #f43f5e;
+            
+            --glass-bg: rgba(15, 23, 42, 0.65);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-primary);
+            line-height: 1.7;
+            padding: 40px 20px;
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(circle at 10% 10%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(217, 70, 239, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.08) 0%, transparent 60%);
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* HEADER MODERN */
+        header {
+            text-align: center;
+            padding: 60px 30px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 2px;
+            background: var(--primary-gradient);
+        }
+
+        .badge-header {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(99, 102, 241, 0.15);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            color: #a5b4fc;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            background: linear-gradient(to right, #ffffff, #cbd5e1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 16px;
+        }
+
+        header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* CARD SECTIONS */
+        section {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 35px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        section:hover {
+            border-color: var(--border-glow);
+            box-shadow: 0 15px 35px rgba(99, 102, 241, 0.1);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+        }
+
+        .section-icon {
+            width: 42px;
+            height: 42px;
+            background: var(--primary-gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+        }
+
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.6rem;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            color: var(--accent-cyan);
+            margin: 25px 0 12px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        /* GRID FOR AUTHORS */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .author-card {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .author-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+        }
+
+        .author-card.arendt::before { background: var(--accent-rose); }
+        .author-card.bauman::before { background: var(--accent-amber); }
+
+        .author-card h4 {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+
+        .author-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+            font-size: 0.95rem;
+        }
+
+        li::before {
+            content: "•";
+            color: var(--primary);
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        /* HIGHLIGHT BOX */
+        .callout {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.05) 100%);
+            border: 1px solid rgba(99, 102, 241, 0.25);
+            border-radius: 14px;
+            padding: 20px;
+            margin-top: 25px;
+        }
+
+        .callout-title {
+            color: #a5b4fc;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .callout p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+        }
+
+        /* TABLE STYLING */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 20px 0;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        th {
+            background-color: rgba(30, 41, 59, 0.8);
+            color: var(--text-primary);
+            font-weight: 600;
+            padding: 14px 18px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        td {
+            padding: 14px 18px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            background-color: rgba(15, 23, 42, 0.4);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background-color: rgba(30, 41, 59, 0.4);
+        }
+
+        /* TAGS */
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-right: 8px;
+        }
+
+        .tag-enem {
+            background: rgba(244, 63, 94, 0.15);
+            color: #fda4af;
+            border: 1px solid rgba(244, 63, 94, 0.3);
+        }
+
+        .tag-atualidades {
+            background: rgba(6, 182, 212, 0.15);
+            color: #67e8f9;
+            border: 1px solid rgba(6, 182, 212, 0.3);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        footer code {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #a5b4fc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <span class="badge-header">Material de Estudo</span>
+        <h1>Holocausto & Guerra Fria 2.0</h1>
+        <p>Análise Sociológica, Filosofia Política e Geopolítica Contemporânea</p>
+    </header>
+
+    <!-- SEÇÃO 1 -->
+    <section>
+        <div class="section-header">
+            <div class="section-icon">01</div>
+            <h2>O Holocausto na Visão de Arendt e Bauman</h2>
+        </div>
+        <p>Hannah Arendt e Zygmunt Bauman desconstruíram a ideia do Holocausto como um mero ato de "irracionalidade histórica", demonstrando como a própria estrutura da modernidade e da burocracia viabilizou o genocídio.</p>
+
+        <div class="grid-2">
+            <!-- ARENDT -->
+            <div class="author-card arendt">
+                <h4>Hannah Arendt</h4>
+                <div class="author-subtitle">"A Banalidade do Mal" (1963)</div>
+                <ul>
+                    <li><strong>Ausência de Pensamento:</strong> Eichmann não era um "monstro fanático", mas um burocrata que abdicou da capacidade de julgar moralmente.</li>
+                    <li><strong>Transferência de Responsabilidade:</strong> O indivíduo torna-se peça de engrenagem, transferindo toda a moralidade para o Estado.</li>
+                    <li><strong>Linguagem Eufemística:</strong> Termos técnicos para mascarar o extermínio (ex: "solução final").</li>
+                </ul>
+            </div>
+
+            <!-- BAUMAN -->
+            <div class="author-card bauman">
+                <h4>Zygmunt Bauman</h4>
+                <div class="author-subtitle">"Modernidade e Holocausto" (1989)</div>
+                <ul>
+                    <li><strong>Produto da Modernidade:</strong> O Holocausto foi um resultado da racionalização, ciência e eficiência moderna.</li>
+                    <li><strong>Divisão Burocrática do Trabalho:</strong> Fragmentação de tarefas neutraliza o sentimento de responsabilidade moral sobre o resultado final.</li>
+                    <li><strong>Engenharia Social:</strong> Sociedade tratada como "jardim", onde a remoção das "ervas daninhas" é vista como algo purificador.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="callout">
+            <div class="callout-title">💡 Síntese Comparativa</div>
+            <p><strong>Arendt</strong> analisa a <em>atitude moral do indivíduo</em> (a incapacidade de pensar criticamente), enquanto <strong>Bauman</strong> foca na <em>estrutura sociológica moderna</em> (como a burocracia e a técnica anulam a ética).</p>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 2 -->
+    <section>
+        <div class="section-header">
+            <div class="section-icon">02</div>
+            <h2>Guerra Fria 2.0 (Nova Ordem Geopolítica)</h2>
+        </div>
+        <p>A "Guerra Fria 2.0" descreve as crescentes rivalidades mundiais no século XXI, focando em guerras tecnológicas, disputas econômicas e blocos multipolares.</p>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dimensão</th>
+                        <th>Guerra Fria (1947–1991)</th>
+                        <th>Guerra Fria 2.0 (Século XXI)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Eixo Principal</strong></td>
+                        <td>EUA vs. URSS</td>
+                        <td>EUA / OTAN vs. China e Rússia</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Estrutura</strong></td>
+                        <td>Bipolaridade Ideológica (Capitalismo vs. Socialismo)</td>
+                        <td>Multipolaridade / Disputa por Autocracia vs. Democracia</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Economia</strong></td>
+                        <td>Blocos econômicos isolados</td>
+                        <td>Alta interdependência global e cadeias globais de valor</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Estratégia</strong></td>
+                        <td>Corrida Nuclear e Espacial</td>
+                        <td>Ciberataques, Inteligência Artificial, Semicondutores e Informação</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Voto de Tensão Contemporâneo</h3>
+        <ul>
+            <li><strong>Guerra Tecnológica (EUA x China):</strong> Disputa pelo domínio dos microchips, IA, 5G e soberania no Mar do Sul da China e Taiwan.</li>
+            <li><strong>Conflito em Solo Europeu (OTAN x Rússia):</strong> Invasão da Ucrânia, expansão militar da OTAN e a guerra energética/cibernética.</li>
+            <li><strong>Aliança Estratégica:</strong> O fortalecimento do eixo Pequim-Moscou como contraponto à hegemonia ocidental.</li>
+        </ul>
+    </section>
+
+    <!-- SEÇÃO 3 -->
+    <section>
+        <div class="section-header">
+            <div class="section-icon">03</div>
+            <h2>Foco para Provas e Vestibulares</h2>
+        </div>
+        <ul>
+            <li>
+                <span class="tag tag-enem">ENEM / Vestibulares</span>
+                <strong>Filosofia e Sociologia:</strong> Relacione o Holocausto aos conceitos de <em>tecnocracia, desumanização, obediência cega e crise da ética moderna</em>.
+            </li>
+            <li>
+                <span class="tag tag-atualidades">Atualidades</span>
+                <strong>Geopolítica:</strong> Observe a transição da unipolaridade (pós-Guerra Fria) para a multipolaridade e o papel da tecnologia como a nova corrida armamentista.
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Desenvolvido para revisão de estudos. Salve este código como um arquivo <code>revisao.html</code> e abra no navegador.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
